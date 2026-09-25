@@ -1,5 +1,6 @@
 // Dati del sito. Il template (index.html) legge solo questo file.
 window.SITE = {
+  layout: "mare",
   name: "Pizzeria Ristorante Titanic",
   shortName: "Titanic",
   tagline: "Pizzeria · Ristorante",
