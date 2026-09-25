@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizzeria Ristorante Titanic · Torino dal 1998</title>
+<meta name="description" content="Pizzeria Ristorante Titanic, Via Frejus 106/i Torino. Pizza al forno a legna con farina macinata a pietra, farinata e specialità di pesce dal 1998.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16233b; --navy-2:#1f3050; --sea:#2f5d8a; --ice:#e9eef3;
+  --cream:#f6f1e7; --paper:#fbf8f2; --ink:#1b2230; --muted:#5d6675;
+  --gold:#b88a3b; --line:#e3dccd; --white:#fff;
+  --r:18px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:.55em;padding:.9em 1.4em;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:#a67a2f}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s,box-shadow .25s}
+header.solid{background:rgba(22,35,59,.96);backdrop-filter:blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;color:#fff}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{width:52px;height:52px}
+.brand b{font-family:Fraunces,serif;font-size:1.25rem;font-weight:600;letter-spacing:.02em}
+.brand small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.75;font-weight:600}
+.links{display:flex;gap:1.8rem;align-items:center;font-weight:600;font-size:.93rem}
+.links a{text-decoration:none;opacity:.9}
+.links a:hover{opacity:1}
+.links .btn{padding:.6em 1.1em}
+@media (max-width:860px){.links a:not(.btn){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,38,.55) 0%,rgba(14,22,38,.25) 35%,rgba(14,22,38,.9) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:clamp(48px,9vh,110px);width:100%}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:13ch;margin:.35em 0 .3em}
+.hero h1 em{font-style:italic;color:#e7c98e}
+.hero p.lead{font-size:clamp(1.02rem,1.6vw,1.2rem);max-width:46ch;opacity:.92}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.hero .badges{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.6rem;font-size:.88rem;font-weight:600;opacity:.9}
+.hero .badges span{display:flex;align-items:center;gap:.5em}
+.hero .badges i{width:7px;height:7px;border-radius:50%;background:#e7c98e;display:inline-block}
+
+/* sections */
+section{padding:clamp(64px,10vw,120px) 0}
+.sec-head{max-width:640px;margin-bottom:2.8rem}
+.sec-head h2{font-size:clamp(2rem,4.2vw,3.1rem);margin:.35em 0 .4em;color:var(--navy)}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pillar{background:var(--paper);padding:2rem 1.6rem}
+.pillar .n{font-family:Fraunces,serif;color:var(--gold);font-size:1.05rem;font-weight:600}
+.pillar h3{font-size:1.3rem;color:var(--navy);margin:.6rem 0 .5rem}
+.pillar p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.pillars{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+
+.story{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.story .ph{position:relative}
+.story .ph img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.story .ph .stamp{position:absolute;right:-18px;bottom:-18px;width:120px;height:120px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.25))}
+.story h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin:.35em 0 .6em}
+.story p{color:var(--muted);margin-bottom:1em}
+.story ul{list-style:none;margin-top:1.4rem;display:grid;gap:.7rem}
+.story li{display:flex;gap:.8rem;align-items:flex-start;font-weight:600}
+.story li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--ice) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%232f5d8a'/%3E%3C/svg%3E") center/14px no-repeat}
+@media (max-width:860px){.story{grid-template-columns:1fr}.story .ph .stamp{right:10px;bottom:-24px;width:96px;height:96px}}
+
+/* menu */
+#menu{background:var(--navy);color:#fff}
+#menu .sec-head h2{color:#fff}
+#menu .sec-head p{color:rgba(255,255,255,.7)}
+.menu-bar{position:sticky;top:76px;z-index:10;background:var(--navy);padding:.8rem 0;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.menu-ctl{display:flex;gap:.8rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.tabs{display:flex;flex-wrap:wrap;gap:.45rem}
+.tabs button{font:inherit;font-weight:600;font-size:.88rem;padding:.5em 1em;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
+.tabs button:hover{border-color:rgba(255,255,255,.5)}
+.tabs button[aria-selected=true]{background:#e7c98e;border-color:#e7c98e;color:var(--navy)}
+.pick{display:none;position:relative;flex:1 1 150px}
+.pick select{appearance:none;-webkit-appearance:none;width:100%;font:inherit;font-weight:700;font-size:.95rem;padding:.7em 2.4em .7em 1em;border-radius:12px;border:1px solid #e7c98e;background:#e7c98e;color:var(--navy);cursor:pointer}
+.pick::after{content:"";position:absolute;right:1em;top:50%;width:8px;height:8px;border:solid var(--navy);border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.search{position:relative;flex:0 1 300px}
+.search input{width:100%;font:inherit;font-size:.95rem;padding:.7em 1em .7em 2.5em;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff}
+.search input::placeholder{color:rgba(255,255,255,.5)}
+@media (max-width:760px){
+  .tabs{display:none}.pick{display:block}
+  .menu-ctl{flex-wrap:nowrap;gap:.5rem}
+  .search{flex:1 1 0;min-width:0}
+}
+.search svg{position:absolute;left:.85em;top:50%;transform:translateY(-50%);width:16px;height:16px;fill:rgba(255,255,255,.55)}
+.cat{margin-bottom:3.2rem}
+.cat-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(231,201,142,.35);padding-bottom:.6rem;margin-bottom:1.2rem}
+.cat-h h3{font-size:1.9rem;color:#e7c98e}
+.cat-h small{color:rgba(255,255,255,.55);font-size:.85rem;text-align:right}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:.3rem 3.2rem}
+@media (max-width:760px){.items{grid-template-columns:1fr}}
+.item{padding:.75rem 0;border-bottom:1px dashed rgba(255,255,255,.1)}
+.item .row{display:flex;align-items:baseline;gap:.6rem}
+.item .name{font-weight:700;letter-spacing:.01em}
+.item .dots{flex:1;border-bottom:1px dotted rgba(255,255,255,.25);transform:translateY(-4px)}
+.item .price{font-weight:700;color:#e7c98e;white-space:nowrap}
+.item .desc{color:rgba(255,255,255,.62);font-size:.9rem;margin-top:.15rem}
+.item .tag{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#e7c98e;color:var(--navy);padding:.15em .55em;border-radius:6px;margin-left:.3rem;vertical-align:2px}
+.menu-note{margin-top:1rem;padding:1.4rem 1.6rem;border-radius:var(--r);background:rgba(255,255,255,.05);color:rgba(255,255,255,.72);font-size:.9rem;display:grid;gap:.5rem}
+.menu-note a{color:#e7c98e;font-weight:700}
+.empty{color:rgba(255,255,255,.6);padding:2rem 0;display:none}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:210px;gap:12px}
+.gallery figure{overflow:hidden;border-radius:14px;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.04)}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 1}.g3{grid-column:span 2}
+.g4{grid-column:span 3;grid-row:span 2}.g5{grid-column:span 3;grid-row:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.g1,.g4,.g5{grid-column:span 2;grid-row:span 2}.g2,.g3{grid-column:span 1}}
+
+/* info */
+#dove{background:var(--cream)}
+.info{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,64px);align-items:stretch}
+.cards{display:grid;gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.6rem}
+.card h3{font-size:1.25rem;color:var(--navy);margin-bottom:.7rem}
+.card p,.card td{color:var(--muted)}
+.card table{width:100%;border-collapse:collapse;font-size:.95rem}
+.card td{padding:.35rem 0;border-bottom:1px solid var(--line)}
+.card tr:last-child td{border:0}
+.card td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+.card tr.today td{color:var(--navy);font-weight:800}
+.card tr.closed td:last-child{color:#b24a3a}
+.card .actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.card .actions .btn{background:var(--navy);color:#fff;padding:.7em 1.1em;font-size:.88rem}
+.card .actions .btn.alt{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.map{border-radius:var(--r);overflow:hidden;min-height:420px;border:1px solid var(--line);background:#dde3e9}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+.status{display:inline-flex;align-items:center;gap:.45em;font-size:.82rem;font-weight:700;padding:.3em .8em;border-radius:999px;margin-bottom:.8rem}
+.status i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.open{background:#e3f3e8;color:#23784a}.status.shut{background:#f8e4e1;color:#b24a3a}
+@media (max-width:860px){.info{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:#0f1829;color:rgba(255,255,255,.7);padding:56px 0 110px;font-size:.92rem}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+.foot .brand b{color:#fff}
+.social{display:flex;gap:.6rem;margin-top:1rem}
+.social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08)}
+.social a:hover{background:rgba(255,255,255,.16)}
+.social svg{width:18px;height:18px;fill:#fff}
+.foot .legal{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:rgba(255,255,255,.45);width:100%}
+
+/* mobile call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:8px}
+.callbar a{flex:1;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.callbar .btn-ghost{background:var(--navy);border-color:var(--navy)}
+@media (max-width:760px){.callbar{display:flex}.links .btn{display:none}}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Pizzeria Ristorante Titanic">
+      <img src="img/logo.webp" alt="" width="52" height="52">
+      <span><b>Titanic</b><small>Pizzeria · Ristorante</small></span>
+    </a>
+    <nav class="links">
+      <a href="#storia">Chi siamo</a>
+      <a href="#menu">Menù</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#dove">Dove siamo</a>
+      <a class="btn btn-gold" href="tel:+390113835787">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        011 383 5787
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Benvenuti">
+  <img class="bg" src="img/sala.webp" alt="La sala del Titanic con il soffitto a cielo stellato e gli iceberg dipinti" fetchpriority="high">
+  <div class="wrap">
+    <span class="eyebrow">Via Frejus · Torino · dal 1998</span>
+    <h1>La rotta del gusto <em>parte da qui</em></h1>
+    <p class="lead">Pizza al forno a legna con farina macinata a pietra, farinata croccante e cucina di mare, in una sala che sembra il ponte di una nave.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="tel:+390113835787">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        Prenota o ordina
+      </a>
+      <a class="btn btn-ghost" href="#menu">Guarda il menù</a>
+    </div>
+    <div class="badges">
+      <span><i></i>Forno a legna</span>
+      <span><i></i>Specialità di pesce</span>
+      <span><i></i>Asporto</span>
+      <span><i></i>Parcheggio interno</span>
+      <span><i></i>★ 4,2 su Google · oltre 600 recensioni</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pillars reveal">
+      <div class="pillar"><span class="n">01</span><h3>Farina macinata a pietra</h3><p>Tipo 2: più saporita, più ricca e più digeribile.</p></div>
+      <div class="pillar"><span class="n">02</span><h3>Forno a legna</h3><p>Pizze cotte come si deve, anche al padellino su richiesta.</p></div>
+      <div class="pillar"><span class="n">03</span><h3>Farinata</h3><p>Croccante fuori e morbida dentro, come vuole la tradizione.</p></div>
+      <div class="pillar"><span class="n">04</span><h3>Cucina di mare</h3><p>Crudi, primi, fritture e grigliate di pesce per chi ama il mare.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="storia" style="padding-top:0">
+  <div class="wrap story">
+    <div class="ph reveal">
+      <img src="img/forno.webp" alt="Pizze appena sfornate dal forno a legna" loading="lazy">
+      <img class="stamp" src="img/logo.webp" alt="" loading="lazy">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">L'equipaggio vi aspetta</span>
+      <h2>Dal 1998 a Torino, con la stessa passione</h2>
+      <p>Da oltre venticinque anni accogliamo famiglie, amici e habitué in due grandi sale dedicate al mare e in un ampio dehors estivo coperto.</p>
+      <p>Il nostro segreto è semplice: <strong>solo farina macinata a pietra</strong>. La macinazione lenta conserva il germe del grano, la parte più nobile del seme, ricca di vitamine e sali minerali. Il risultato è un impasto profumato, leggero e facile da digerire.</p>
+      <ul>
+        <li>Impasto integrale ai cereali su richiesta</li>
+        <li>Due sale a tema e dehors estivo coperto</li>
+        <li>Parcheggio interno per i clienti</li>
+        <li>Pizze e farinata anche da asporto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Il menù</span>
+      <h2>Dalla cambusa del Titanic</h2>
+      <p>Oltre 60 pizze, focacce e farinata, antipasti, primi e secondi di mare e di terra. Prezzi in euro.</p>
+    </div>
+  </div>
+  <div class="menu-bar">
+    <div class="wrap">
+      <div class="menu-ctl">
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <label class="pick"><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Categoria</span><select id="pick" aria-label="Scegli una categoria"></select></label>
+        <label class="search">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9"/></svg>
+          <input id="q" type="search" placeholder="Cerca…" aria-label="Cerca nel menù">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div id="menu-list"></div>
+    <p class="empty" id="empty">Nessun piatto trovato. Prova con un altro ingrediente.</p>
+    <div class="menu-note">
+      <span>* Prodotto surgelato. Talvolta alcuni prodotti freschi non sono reperibili sul mercato e possono essere sostituiti con prodotti surgelati.</span>
+      <span>Coperto € 1,50 · Origano su tutte le pizze a richiesta · Pizza al padellino su richiesta.</span>
+      <span>Alcuni ingredienti possono contenere allergeni (cereali, uova, crostacei, sedano, soia, latticini, arachidi, senape, lupini, frutta a guscio, molluschi). Chiedete al personale la documentazione sugli allergeni.</span>
+      <span><a href="img/menu-titanic.pdf" target="_blank" rel="noopener">Scarica il menù in PDF →</a></span>
+    </div>
+  </div>
+</section>
+
+<section id="galleria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">A bordo</span>
+      <h2>Benvenuti sul Titanic</h2>
+      <p>Soffitto stellato, iceberg alle pareti e profumo di forno a legna.</p>
+    </div>
+    <div class="gallery reveal">
+      <figure class="g1"><img src="img/sala.webp" alt="La sala principale" loading="lazy"></figure>
+      <figure class="g2"><img src="img/pizza.webp" alt="Pizza con farina macinata a pietra" loading="lazy"></figure>
+      <figure class="g3"><img src="img/pizza-cozze.webp" alt="Pizza con cozze" loading="lazy"></figure>
+      <figure class="g4"><img src="img/pesce.webp" alt="Zuppetta di mare" loading="lazy"></figure>
+      <figure class="g5"><img src="img/grigliata.webp" alt="Grigliata mista di pesce" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="dove">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Dove siamo</span>
+      <h2>Via Frejus 106/i, Torino</h2>
+      <p>Con parcheggio interno riservato ai clienti.</p>
+    </div>
+    <div class="info">
+      <div class="cards">
+        <div class="card reveal">
+          <span class="status" id="status"><i></i><span></span></span>
+          <h3>Orari</h3>
+          <table id="hours"></table>
+        </div>
+        <div class="card reveal">
+          <h3>Contatti</h3>
+          <p>Via Frejus 106/i, 10139 Torino<br>Tel. 011 383 5787<br>pizzatitanic@gmail.com</p>
+          <div class="actions">
+            <a class="btn" href="tel:+390113835787">Chiama</a>
+            <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Pizzeria+Ristorante+Titanic+Via+Frejus+106+Torino" target="_blank" rel="noopener">Indicazioni</a>
+            <a class="btn alt" href="mailto:pizzatitanic@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Mappa Pizzeria Titanic" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Pizzeria%20Ristorante%20Titanic%2C%20Via%20Frejus%20106%2C%20Torino&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><img src="img/logo.webp" alt="" width="52" height="52"><span><b>Titanic</b><small>Pizzeria · Ristorante · dal 1998</small></span></a>
+      <div class="social">
+        <a href="https://www.facebook.com/PizzeriaRistoranteTitanic/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4a22 22 0 0 0-2.5-.1c-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8z"/></svg></a>
+        <a href="https://www.instagram.com/titanicpizzeria1998/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3m0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6m6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0M21.9 8c0-1.6-.4-3-1.6-4.2S17.7 2.1 16 2.1c-1.6-.1-6.5-.1-8.1 0-1.6.1-3 .4-4.2 1.6S2.1 6.3 2.1 8c-.1 1.6-.1 6.5 0 8.1.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.5.1 8.1 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.5.1-8.1M19.8 18a3.1 3.1 0 0 1-1.8 1.8c-1.2.5-4.1.4-5.5.4s-4.2.1-5.4-.4A3.1 3.1 0 0 1 5.3 18c-.5-1.2-.4-4.1-.4-5.4s-.1-4.2.4-5.4A3.1 3.1 0 0 1 7.1 5.4c1.2-.5 4.1-.4 5.4-.4s4.2-.1 5.4.4a3.1 3.1 0 0 1 1.8 1.8c.5 1.2.4 4.1.4 5.4s.1 4.2-.4 5.4"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p><strong style="color:#fff">Pizzeria Ristorante Titanic</strong><br>Via Frejus 106/i, 10139 Torino<br><a href="tel:+390113835787">011 383 5787</a> · <a href="mailto:pizzatitanic@gmail.com">pizzatitanic@gmail.com</a></p>
+    </div>
+    <div class="legal">L'equipaggio augura a tutti voi buon appetito e buon viaggio. · © Pizzeria Ristorante Titanic · P.IVA da inserire · Privacy e cookie</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-gold" href="tel:+390113835787">Chiama</a>
+  <a class="btn btn-ghost" href="#menu">Menù</a>
+</div>
+
+<script>
+const MENU = [
+ {id:"pizze", t:"Pizze", s:"Pizze", note:"Farina macinata a pietra tipo 2 · origano a richiesta", items:[
+  ["Marinara","5,00","pomodoro, aglio, origano, olio EVO"],
+  ["Margherita","6,00","pomodoro, mozzarella, olio EVO"],
+  ["Olive","6,50","pomodoro, mozzarella, olive, olio EVO"],
+  ["Cipolla","6,50","pomodoro, mozzarella, cipolla, olio EVO"],
+  ["Campagnola","6,50","pomodoro, pomodoro fresco, aglio, parmigiano, basilico, olio EVO"],
+  ["Rucola","7,00","pomodoro fresco, mozzarella, rucola, olio EVO"],
+  ["Funghi","7,00","pomodoro, mozzarella, funghi, olio EVO"],
+  ["Prosciutto","7,00","pomodoro, mozzarella, prosciutto, olio EVO"],
+  ["Salamino","7,00","pomodoro, mozzarella, salamino, olio EVO"],
+  ["Napoletana","7,00","pomodoro, mozzarella, acciughe, olio EVO"],
+  ["Margherita con bufala","7,00","pomodoro, mozzarella di bufala, olio EVO"],
+  ["Prosciutto e funghi","7,50","pomodoro, mozzarella, prosciutto, funghi, olio EVO"],
+  ["Parmigiana","8,00","pomodoro, mozzarella, melanzane, parmigiano, olio EVO"],
+  ["La Bufala","8,00","pomodoro fresco, mozzarella di bufala, basilico, olio EVO"],
+  ["Canadese","8,00","pomodoro, mozzarella, prosciutto, würstel, olio EVO"],
+  ["Quattro stagioni","8,00","pomodoro, mozzarella, prosciutto, funghi, olive, carciofi, olio EVO"],
+  ["Bismark","8,00","pomodoro, mozzarella, prosciutto, uovo, olio EVO"],
+  ["Calzone","8,00","pomodoro, mozzarella, prosciutto, funghi, olio EVO"],
+  ["Siciliana","8,00","pomodoro, mozzarella, capperi, acciughe, olive, olio EVO"],
+  ["Stracchino e rucola","8,00","pomodoro fresco, mozzarella, stracchino, rucola, olio EVO"],
+  ["Quattro formaggi","8,00","pomodoro, mozzarella, gorgonzola, berna, olandese, olio EVO"],
+  ["Valdostana","8,00","pomodoro, mozzarella, prosciutto, fontina, olio EVO"],
+  ["Saporita","8,00","pomodoro, mozzarella, salsiccia fresca, patate, prezzemolo, olio EVO"],
+  ["Ligure","8,00","mozzarella, pesto, olive taggiasche, patate"],
+  ["Gorgonzola e cipolla","8,50","pomodoro, mozzarella, gorgonzola, cipolla, olio EVO"],
+  ["Gorgonzola e pere","8,50","mozzarella, gorgonzola, pera"],
+  ["Greca","8,50","pomodoro, mozzarella, tonno, uova sode, olive, olio EVO"],
+  ["Capricciosa","8,50","pomodoro, mozzarella, prosciutto, funghi, salamino, carciofi, olive, olio EVO"],
+  ["Maratona","8,50","pomodoro, mozzarella, prosciutto, salamino, fontina, olio EVO"],
+  ["Mediterranea","8,50","pomodoro, mozzarella, tonno, cipolla, olio EVO"],
+  ["Filadelfia","8,50","pomodoro, mozzarella, gorgonzola, salamino, funghi, olio EVO"],
+  ["La Gustosa","8,50","mozzarella, patate, gorgonzola, olio EVO"],
+  ["Verdure","8,50","pomodoro fresco, mozzarella, verdure grigliate, olio EVO"],
+  ["Diavola","8,50","pomodoro, mozzarella, funghi, peperoni arrostiti, salamino, olio EVO"],
+  ["Salsiccia e friarielli","8,50","mozzarella, salsiccia, friarielli, aglio, olio EVO"],
+  ["Sfiziosa","8,50","pomodoro, mozzarella, stracchino, speck, olio EVO"],
+  ["Patapizza","9,00","pomodoro, mozzarella, patatine fritte*"],
+  ["La Delizia","9,00","pomodoro, mozzarella, gamberi*, rucola, olio EVO"],
+  ["Gorgonzola e noci","9,00","mozzarella, gorgonzola, noci"],
+  ["Tirolese","9,00","mozzarella, gorgonzola, radicchio, speck, olio EVO"],
+  ["Trevisana","9,00","pomodoro fresco, mozzarella, radicchio, provola, olio EVO"],
+  ["Zucchine e lardo","9,00","pomodoro fresco, mozzarella, zucchine, lardo, olio EVO"],
+  ["Zenzero","10,00","mozzarella, zenzero, caprino, miele"],
+  ["Crudo di Parma","10,00","pomodoro, mozzarella, prosciutto crudo di Parma"],
+  ["La Porcini","13,00","mozzarella, funghi porcini*, aglio, prezzemolo, olio EVO"],
+  ["Valtellina","13,00","pomodoro fresco, mozzarella, bresaola, rucola, scaglie di parmigiano"],
+  ["Pescatora","15,00","pomodoro, frutti di mare*, prezzemolo, aglio, olio EVO"],
+ ], extra:"Impasto integrale ai cereali +€ 1,00 · Aggiunte: mozzarella di bufala € 2,00 · patatine fritte € 3,00 · crudo di Parma € 3,00"},
+ {id:"speciali", t:"Le Speciali", s:"Speciali", items:[
+  ["Titanic","18,00","la pizza della casa: chiedete all'equipaggio*","Firma"],
+  ["Calabrese","13,00","pomodoro, 'nduja e burrata"],
+  ["Italy","13,00","pomodoro passato, pachino, rucola, prosciutto crudo di Parma, burrata"],
+  ["Stamberga","13,00","quattro spicchi: quattro formaggi, greca, pescatora, capricciosa, asparagi*"],
+  ["Bolognese","12,00","mozzarella, mortadella, burrata, pistacchio"],
+  ["Montanara","10,00","mozzarella, lardo, caprino e miele"],
+  ["Burrata","8,00","pomodoro e burrata"],
+ ]},
+ {id:"farinata", t:"Focacce e Farinata", s:"Farinata e focacce", note:"Farina macinata a pietra tipo 2", items:[
+  ["Farinata","4,00","","Tradizione"],
+  ["Focaccia al rosmarino","4,00","farina, sale, olio EVO, rosmarino"],
+  ["Focaccia all'origano","4,00","farina, sale, olio EVO, origano"],
+  ["Focaccia al lardo","7,00","farina, olio EVO, lardo"],
+  ["Focaccia pachino e rucola","7,00","farina, sale, olio EVO, pomodoro pachino e rucola"],
+  ["Focaccia allo speck","8,00","farina, olio EVO, speck"],
+  ["Focaccia alla mortadella","8,00","farina, sale, olio EVO, mortadella"],
+  ["Focaccia al crudo di Parma","9,00","farina, olio EVO, crudo di Parma"],
+ ]},
+ {id:"antipasti", t:"Antipasti", s:"Antipasti", items:[
+  ["Ostriche","3,50 cad.",""],
+  ["Antipasto misto di mare*","15,00",""],
+  ["Tagliere misto","15,00","affettati e formaggi"],
+  ["Insalata di mare*","14,00",""],
+  ["Crudo di Parma con burrata e chiacchiere","13,00",""],
+  ["Bresaola e rucola","13,00","con scaglie di grana"],
+  ["Tartare di tonno*","12,00","capperi e olive"],
+  ["Zuppa di cozze","12,00",""],
+  ["Insalata di polipo* e patate","12,00",""],
+  ["Carpaccio di spada*","12,00","pachino e rucola"],
+  ["Impepata di cozze","10,00",""],
+  ["Cocktail di gamberetti*","9,00",""],
+  ["Bufala intera","8,00",""],
+ ]},
+ {id:"primi", t:"Primi e Pasta fresca", s:"Primi", items:[
+  ["Pennette al salmone","10,00",""],
+  ["Pennette del marinaio","13,00","pomodori, polipo*, melanzane, olive taggiasche"],
+  ["Spaghetti alle vongole veraci","14,00",""],
+  ["Linguine agli scampi e funghi porcini*","15,00",""],
+  ["Linguine all'astice","18,00",""],
+  ["Risotto castelmagno e funghi porcini*","12,00",""],
+  ["Risotto alla pescatora*","15,00",""],
+  ["Paella*","18,00","a persona, minimo 2 persone"],
+  ["Scialatelli ai frutti di mare*","15,00","pasta fresca"],
+  ["Scialatelli alle vongole","15,00","pasta fresca, pistacchio e pomodori secchi"],
+  ["Orecchiette alla pugliese","10,00","melanzane, olive taggiasche, pancetta, ricotta salata"],
+  ["Orecchiette con broccoli e gamberi","12,00",""],
+  ["Tagliolini con gamberi* e zucchine","12,00",""],
+  ["Tagliolini ai funghi porcini*","12,00",""],
+  ["Gnocchi al pesto con calamaretti* e pachino","12,00",""],
+  ["Gnocchi al gorgonzola, speck e noci","10,00",""],
+ ]},
+ {id:"pesce", t:"Pesce", s:"Pesce", items:[
+  ["Grigliata mista di pesce*","25,00",""],
+  ["Fritto di calamari e gamberi*","18,00",""],
+  ["Fritto misto di mare*","18,00",""],
+  ["Zuppetta di mare*","18,00",""],
+  ["Pescespada* gratinato al lime","18,00",""],
+  ["Pescespada* ai funghi porcini*","18,00",""],
+  ["Branzino sfilettato ai funghi porcini*","18,00",""],
+  ["Filetto di rombo alle quattro stagioni in crosta","18,00",""],
+  ["Tagliata di tonno* al sesamo e pistacchi","16,00",""],
+  ["Tagliata di tonno* alle verdure","16,00",""],
+  ["Branzino sfilettato alla ligure","16,00",""],
+  ["Salmone alla griglia","15,00",""],
+ ]},
+ {id:"carne", t:"Carne e Contorni", s:"Carne e contorni", items:[
+  ["Sottofiletto ai funghi porcini*","16,00",""],
+  ["Sottofiletto alla griglia","15,00",""],
+  ["Tagliata di vitello con verdure","15,00",""],
+  ["Tagliata di vitello con radicchio","15,00","parmigiano e glassa al balsamico"],
+  ["Tagliata di vitello con rucola e pachino","15,00",""],
+  ["Cotoletta alla milanese","13,00","con rucola e pachino"],
+  ["Insalata con rucola, gamberetti* e carote","9,00",""],
+  ["Insalata mediterranea","8,00","insalata verde, pomodori, mais, tonno, cipolla"],
+  ["Nizzarda","8,00","insalata verde, pomodori, uova, tonno, olive, mozzarella"],
+  ["Misto di verdure grigliate","7,00",""],
+  ["Insalata mista","4,50",""],
+  ["Insalata verde","4,00",""],
+  ["Patate al forno","4,00",""],
+  ["Patate prezzemolate","4,00",""],
+  ["Patatine fritte*","4,00",""],
+  ["Spinaci* al burro","4,00",""],
+ ]},
+ {id:"dessert", t:"Dessert e Caffetteria", s:"Dolci", items:[
+  ["Dolci della casa","5,00",""],
+  ["Affogati","6,00",""],
+  ["Caffè","1,50",""],
+  ["Amari","3,00",""],
+  ["Grappe","3,00",""],
+ ]},
+ {id:"bevande", t:"Birre e Bevande", s:"Bevande", items:[
+  ["Menabrea bionda","3,50 · 5,00","piccola 0,20 L · media 0,40 L"],
+  ["Menabrea rossa","4,00 · 6,00","piccola 0,20 L · media 0,40 L"],
+  ["Birre in bottiglia","4,00","cl 33"],
+  ["Coca-Cola alla spina","3,00 · 4,00","piccola · media"],
+  ["Bibite in bottiglia","3,00","cl 33 · Coca-Cola, Fanta, Sprite, Coca-Cola Light"],
+  ["Acqua minerale","2,00","1/2 L"],
+  ["Pinot Serena sfuso","4,00 · 7,00 · 12,00","1/4 · 1/2 · 1 L"],
+  ["Barbera Vinchio Vaglio sfusa","4,00 · 7,00 · 12,00","1/4 · 1/2 · 1 L"],
+  ["Prosecco veneto","4,00","mini bottiglia 0,20 L"],
+  ["Prosecco Valdobbiadene","10,00","0,375 L"],
+ ]},
+ {id:"vini", t:"Vini", s:"Vini", items:[
+  ["Barbera d'Asti","15,00","rosso"],
+  ["Freisa","15,00","rosso"],
+  ["Dolcetto","15,00","rosso"],
+  ["Grignolino","15,00","rosso"],
+  ["Bonarda dell'Oltrepò Pavese Dione","15,00","rosso"],
+  ["Barbera d'Alba","18,00","rosso"],
+  ["Alghero","12,00","rosato"],
+  ["Corvo","13,00","rosato"],
+  ["Müller Thurgau Vigneti delle Dolomiti","15,00","bianco"],
+  ["Vermentino di Sardegna","15,00","bianco"],
+  ["Favorita","15,00","bianco"],
+  ["Pigato ligure","18,00","bianco"],
+  ["Greco di Tufo Borgotufato","18,00","bianco · anche 0,375 L a € 10,00"],
+  ["Fiano d'Avellino Borgotufato","18,00","bianco"],
+  ["Arneis Roero Pescaja","18,00","bianco"],
+  ["Gewürztraminer","18,00","bianco"],
+  ["Sauvignon del Collio","18,00","bianco"],
+  ["Vermentino di Gallura","10,00","bianco · 0,375 L"],
+  ["Prosecco Mionetto Corda","18,00","bollicine"],
+  ["Spumante Prosecco","18,00","bollicine"],
+  ["Spumante dolce Moscato","15,00","bollicine"],
+ ]},
+];
+
+// Orari: 0 = domenica
+const HOURS = [
+  ["Lunedì",   [[12,0,14,30],[19,0,24,0]]],
+  ["Martedì",  [[12,0,14,30],[19,0,24,0]]],
+  ["Mercoledì",[]],
+  ["Giovedì",  [[12,0,14,30],[19,0,24,0]]],
+  ["Venerdì",  [[12,0,14,30],[19,0,24,0]]],
+  ["Sabato",   [[12,0,14,30],[19,0,24,0]]],
+  ["Domenica", [[12,0,14,30],[19,0,24,0]]],
+];
+
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const list = document.getElementById('menu-list');
+const tabs = document.getElementById('tabs');
+
+list.innerHTML = MENU.map(c => `
+  <div class="cat" id="cat-${c.id}" data-cat="${c.id}">
+    <div class="cat-h"><h3>${c.t}</h3>${c.note ? `<small>${c.note}</small>` : ''}</div>
+    <div class="items">${c.items.map(([n,p,d,tag]) => `
+      <div class="item" data-s="${esc((n+' '+d).toLowerCase())}">
+        <div class="row"><span class="name">${esc(n)}${tag?`<span class="tag">${tag}</span>`:''}</span><span class="dots"></span><span class="price">€ ${p}</span></div>
+        ${d ? `<div class="desc">${esc(d)}</div>` : ''}
+      </div>`).join('')}
+    </div>
+    ${c.extra ? `<p class="desc" style="margin-top:1rem;color:rgba(255,255,255,.62);font-size:.9rem">${c.extra}</p>` : ''}
+  </div>`).join('');
+
+tabs.innerHTML = MENU.map((c,i) => `<button role="tab" aria-selected="${i===0}" data-go="${c.id}">${c.s}</button>`).join('');
+const pick = document.getElementById('pick');
+pick.innerHTML = MENU.map(c => `<option value="${c.id}">${c.t}</option>`).join('');
+const go = id => {
+  const el = document.getElementById('cat-'+id);
+  const bar = document.querySelector('.menu-bar').offsetHeight;
+  scrollTo({top: el.getBoundingClientRect().top + scrollY - 76 - bar - 12, behavior:'smooth'});
+};
+tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) go(b.dataset.go); });
+pick.addEventListener('change', () => go(pick.value));
+
+// Evidenzia la categoria visibile
+const cats = [...document.querySelectorAll('.cat')];
+const setTab = id => {
+  tabs.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.go === id));
+  pick.value = id;
+};
+let current = '';
+addEventListener('scroll', () => {
+  const y = 76 + document.querySelector('.menu-bar').offsetHeight + 40;
+  let id = cats.find(c => c.style.display !== 'none')?.dataset.cat || cats[0].dataset.cat;
+  for (const c of cats) if (c.style.display !== 'none' && c.getBoundingClientRect().top < y) id = c.dataset.cat;
+  if (id !== current) { current = id; setTab(id); }
+}, {passive:true});
+
+// Ricerca
+document.getElementById('q').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase(); let any = false;
+  cats.forEach(c => {
+    let vis = 0;
+    c.querySelectorAll('.item').forEach(it => { const ok = !q || it.dataset.s.includes(q); it.style.display = ok ? '' : 'none'; vis += ok; });
+    c.style.display = vis ? '' : 'none'; any ||= vis > 0;
+  });
+  document.getElementById('empty').style.display = any ? 'none' : 'block';
+});
+
+// Orari + stato aperto/chiuso
+const now = new Date(), dow = (now.getDay() + 6) % 7, mins = now.getHours()*60 + now.getMinutes();
+const fmt = (h,m) => String(h===24?0:h).padStart(2,'0')+':'+String(m).padStart(2,'0');
+document.getElementById('hours').innerHTML = HOURS.map(([d,sl],i) =>
+  `<tr class="${i===dow?'today':''} ${sl.length?'':'closed'}"><td>${d}</td><td>${sl.length ? sl.map(s=>fmt(s[0],s[1])+'–'+fmt(s[2],s[3])).join(' · ') : 'Chiuso'}</td></tr>`).join('');
+const open = HOURS[dow][1].some(([a,b,c,d]) => mins >= a*60+b && mins < c*60+d);
+const st = document.getElementById('status');
+st.className = 'status ' + (open ? 'open' : 'shut');
+st.lastElementChild.textContent = open ? 'Aperto ora' : 'Chiuso ora';
+
+// Header e animazioni
+const hd = document.querySelector('header');
+const onScroll = () => hd.classList.toggle('solid', scrollY > 40);
+onScroll(); addEventListener('scroll', onScroll, {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
